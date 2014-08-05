@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.05" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -1437,7 +1437,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <instance part="U$2" gate="WING_AU" x="-71.12" y="157.48"/>
 <instance part="U$2" gate="WING_BL" x="-30.48" y="187.96"/>
 <instance part="U$2" gate="WING_BU" x="-30.48" y="157.48"/>
-<instance part="U$2" gate="WING_CL" x="10.16" y="187.96"/>
+<instance part="U$2" gate="WING_CL" x="30.48" y="187.96"/>
 <instance part="U$2" gate="WING_CU" x="30.48" y="142.24"/>
 <instance part="IC2" gate="G$1" x="45.72" y="45.72"/>
 <instance part="GND1" gate="1" x="27.94" y="-20.32"/>
@@ -1815,7 +1815,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <net name="N$5" class="0">
 <segment>
 <pinref part="U$2" gate="WING_CL" pin="5V"/>
-<wire x1="30.48" y1="180.34" x2="43.18" y2="180.34" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="180.34" x2="63.5" y2="180.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="A5_3V3" class="0">
@@ -1943,6 +1943,18 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <pinref part="IC2" gate="G$1" pin="B10"/>
 <wire x1="60.96" y1="10.16" x2="73.66" y2="10.16" width="0.1524" layer="91"/>
 <label x="63.5" y="10.16" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="A10_3V3" class="0">
+<segment>
+<pinref part="IC2" gate="G$1" pin="B9"/>
+<wire x1="60.96" y1="17.78" x2="73.66" y2="17.78" width="0.1524" layer="91"/>
+<label x="63.5" y="17.78" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="WING_CL" pin="P$8"/>
+<wire x1="25.4" y1="170.18" x2="12.7" y2="170.18" width="0.1524" layer="91"/>
+<label x="12.7" y="170.18" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

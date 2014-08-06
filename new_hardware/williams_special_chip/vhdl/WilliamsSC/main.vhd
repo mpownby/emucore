@@ -30,7 +30,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity main is
-    Port ( A : inout  STD_LOGIC_VECTOR(15 downto 14);
+    Port (
+				A : inout  STD_LOGIC_VECTOR(15 downto 14);
            B : inout  STD_LOGIC_VECTOR(15 downto 0);
            C : inout  STD_LOGIC_VECTOR(15 downto 0));
 end main;
@@ -40,7 +41,7 @@ architecture Behavioral of main is
 begin
 
 A(15 downto 14) <= "11";
-B <= "1000000000000001";
-C <= "1000000000000001";
+B <= "1111111111111111";
+C <= "1111111111111111";
 
 end Behavioral;

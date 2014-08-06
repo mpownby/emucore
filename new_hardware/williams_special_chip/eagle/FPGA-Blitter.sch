@@ -1535,16 +1535,17 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 so make sure diode can handle that
 (if it is used for something beyond a voltage
 reference, which I am not sure about)</text>
+<text x="2.54" y="152.4" size="1.778" layer="98">where is A9?</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="-109.22" y="-66.04"/>
 <instance part="FRAME1" gate="G$2" x="215.9" y="-66.04"/>
 <instance part="IC1" gate="G$1" x="5.08" y="15.24"/>
 <instance part="U$2" gate="WING_AL" x="-83.82" y="187.96"/>
-<instance part="U$2" gate="WING_AU" x="-86.36" y="144.78"/>
+<instance part="U$2" gate="WING_AU" x="-83.82" y="144.78"/>
 <instance part="U$2" gate="WING_BL" x="-17.78" y="187.96"/>
 <instance part="U$2" gate="WING_BU" x="-17.78" y="142.24"/>
-<instance part="U$2" gate="WING_CL" x="30.48" y="187.96"/>
+<instance part="U$2" gate="WING_CL" x="33.02" y="187.96"/>
 <instance part="U$2" gate="WING_CU" x="30.48" y="142.24"/>
 <instance part="IC2" gate="G$1" x="45.72" y="45.72"/>
 <instance part="GND1" gate="1" x="27.94" y="-20.32"/>
@@ -1971,12 +1972,6 @@ reference, which I am not sure about)</text>
 <wire x1="33.02" y1="40.64" x2="40.64" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="U$2" gate="WING_CL" pin="5V"/>
-<wire x1="50.8" y1="180.34" x2="63.5" y2="180.34" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="A5_3V3" class="0">
 <segment>
 <pinref part="U$2" gate="WING_CU" pin="P$8"/>
@@ -2103,6 +2098,11 @@ reference, which I am not sure about)</text>
 <wire x1="60.96" y1="10.16" x2="73.66" y2="10.16" width="0.1524" layer="91"/>
 <label x="63.5" y="10.16" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U$2" gate="WING_CL" pin="P$8"/>
+<wire x1="27.94" y1="170.18" x2="12.7" y2="170.18" width="0.1524" layer="91"/>
+<label x="12.7" y="170.18" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="A10_3V3" class="0">
 <segment>
@@ -2111,9 +2111,9 @@ reference, which I am not sure about)</text>
 <label x="63.5" y="17.78" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="WING_CL" pin="P$8"/>
-<wire x1="25.4" y1="170.18" x2="12.7" y2="170.18" width="0.1524" layer="91"/>
-<label x="12.7" y="170.18" size="1.778" layer="95"/>
+<wire x1="27.94" y1="172.72" x2="12.7" y2="172.72" width="0.1524" layer="91"/>
+<label x="12.7" y="172.72" size="1.778" layer="95"/>
+<pinref part="U$2" gate="WING_CL" pin="P$7"/>
 </segment>
 </net>
 <net name="A11_3V3" class="0">
@@ -2123,9 +2123,9 @@ reference, which I am not sure about)</text>
 <label x="63.5" y="20.32" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="WING_CL" pin="P$7"/>
-<wire x1="25.4" y1="172.72" x2="12.7" y2="172.72" width="0.1524" layer="91"/>
-<label x="12.7" y="172.72" size="1.778" layer="95"/>
+<wire x1="27.94" y1="175.26" x2="12.7" y2="175.26" width="0.1524" layer="91"/>
+<label x="12.7" y="175.26" size="1.778" layer="95"/>
+<pinref part="U$2" gate="WING_CL" pin="P$6"/>
 </segment>
 </net>
 <net name="A12_3V3" class="0">
@@ -2135,9 +2135,9 @@ reference, which I am not sure about)</text>
 <label x="63.5" y="22.86" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="WING_CL" pin="P$6"/>
-<wire x1="25.4" y1="175.26" x2="12.7" y2="175.26" width="0.1524" layer="91"/>
-<label x="12.7" y="175.26" size="1.778" layer="95"/>
+<wire x1="27.94" y1="177.8" x2="12.7" y2="177.8" width="0.1524" layer="91"/>
+<label x="12.7" y="177.8" size="1.778" layer="95"/>
+<pinref part="U$2" gate="WING_CL" pin="P$5"/>
 </segment>
 </net>
 <net name="4MHZ_3V3" class="0">
@@ -2147,9 +2147,9 @@ reference, which I am not sure about)</text>
 <label x="63.5" y="25.4" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="WING_CL" pin="P$5"/>
-<wire x1="25.4" y1="177.8" x2="12.7" y2="177.8" width="0.1524" layer="91"/>
-<label x="12.7" y="177.8" size="1.778" layer="95"/>
+<wire x1="27.94" y1="180.34" x2="12.7" y2="180.34" width="0.1524" layer="91"/>
+<label x="12.7" y="180.34" size="1.778" layer="95"/>
+<pinref part="U$2" gate="WING_CL" pin="P$4"/>
 </segment>
 </net>
 <net name="!RESET_3V3" class="0">
@@ -2159,9 +2159,9 @@ reference, which I am not sure about)</text>
 <label x="63.5" y="27.94" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="WING_CL" pin="P$4"/>
-<wire x1="25.4" y1="180.34" x2="12.7" y2="180.34" width="0.1524" layer="91"/>
-<label x="12.7" y="180.34" size="1.778" layer="95"/>
+<wire x1="27.94" y1="182.88" x2="12.7" y2="182.88" width="0.1524" layer="91"/>
+<label x="12.7" y="182.88" size="1.778" layer="95"/>
+<pinref part="U$2" gate="WING_CL" pin="P$3"/>
 </segment>
 </net>
 <net name="A13_3V3" class="0">
@@ -2171,9 +2171,9 @@ reference, which I am not sure about)</text>
 <label x="63.5" y="30.48" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="WING_CL" pin="P$3"/>
-<wire x1="25.4" y1="182.88" x2="12.7" y2="182.88" width="0.1524" layer="91"/>
-<label x="12.7" y="182.88" size="1.778" layer="95"/>
+<wire x1="27.94" y1="185.42" x2="12.7" y2="185.42" width="0.1524" layer="91"/>
+<label x="12.7" y="185.42" size="1.778" layer="95"/>
+<pinref part="U$2" gate="WING_CL" pin="P$2"/>
 </segment>
 </net>
 <net name="A14_3V3" class="0">
@@ -2183,9 +2183,9 @@ reference, which I am not sure about)</text>
 <label x="63.5" y="33.02" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="WING_CL" pin="P$2"/>
-<wire x1="25.4" y1="185.42" x2="12.7" y2="185.42" width="0.1524" layer="91"/>
-<label x="12.7" y="185.42" size="1.778" layer="95"/>
+<wire x1="27.94" y1="187.96" x2="12.7" y2="187.96" width="0.1524" layer="91"/>
+<label x="12.7" y="187.96" size="1.778" layer="95"/>
+<pinref part="U$2" gate="WING_CL" pin="P$1"/>
 </segment>
 </net>
 <net name="A15_3V3" class="0">
@@ -2195,9 +2195,9 @@ reference, which I am not sure about)</text>
 <label x="63.5" y="35.56" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="WING_CL" pin="P$1"/>
-<wire x1="25.4" y1="187.96" x2="12.7" y2="187.96" width="0.1524" layer="91"/>
-<label x="12.7" y="187.96" size="1.778" layer="95"/>
+<wire x1="-88.9" y1="127" x2="-104.14" y2="127" width="0.1524" layer="91"/>
+<label x="-104.14" y="127" size="1.778" layer="95"/>
+<pinref part="U$2" gate="WING_AU" pin="P$8"/>
 </segment>
 </net>
 <net name="!WINH_3V3" class="0">
@@ -2207,9 +2207,9 @@ reference, which I am not sure about)</text>
 <label x="63.5" y="38.1" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="WING_AU" pin="P$8"/>
-<wire x1="-91.44" y1="127" x2="-104.14" y2="127" width="0.1524" layer="91"/>
-<label x="-104.14" y="127" size="1.778" layer="95"/>
+<wire x1="-88.9" y1="129.54" x2="-104.14" y2="129.54" width="0.1524" layer="91"/>
+<label x="-104.14" y="129.54" size="1.778" layer="95"/>
+<pinref part="U$2" gate="WING_AU" pin="P$7"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -2234,8 +2234,8 @@ reference, which I am not sure about)</text>
 </segment>
 <segment>
 <pinref part="U$2" gate="WING_BU" pin="P$8"/>
-<wire x1="-22.86" y1="124.46" x2="-33.02" y2="124.46" width="0.1524" layer="91"/>
-<label x="-33.02" y="124.46" size="1.778" layer="95"/>
+<wire x1="-22.86" y1="124.46" x2="-35.56" y2="124.46" width="0.1524" layer="91"/>
+<label x="-35.56" y="124.46" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="A3_3V3" class="0">
@@ -2246,8 +2246,8 @@ reference, which I am not sure about)</text>
 </segment>
 <segment>
 <pinref part="U$2" gate="WING_BU" pin="P$7"/>
-<wire x1="-22.86" y1="127" x2="-33.02" y2="127" width="0.1524" layer="91"/>
-<label x="-33.02" y="127" size="1.778" layer="95"/>
+<wire x1="-22.86" y1="127" x2="-35.56" y2="127" width="0.1524" layer="91"/>
+<label x="-35.56" y="127" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="R/!W_3V3" class="0">
@@ -2258,8 +2258,8 @@ reference, which I am not sure about)</text>
 </segment>
 <segment>
 <pinref part="U$2" gate="WING_BU" pin="P$6"/>
-<wire x1="-22.86" y1="129.54" x2="-33.02" y2="129.54" width="0.1524" layer="91"/>
-<label x="-33.02" y="129.54" size="1.778" layer="95"/>
+<wire x1="-22.86" y1="129.54" x2="-35.56" y2="129.54" width="0.1524" layer="91"/>
+<label x="-35.56" y="129.54" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D0_3V3" class="0">
@@ -2270,8 +2270,8 @@ reference, which I am not sure about)</text>
 </segment>
 <segment>
 <pinref part="U$2" gate="WING_BU" pin="P$5"/>
-<wire x1="-22.86" y1="132.08" x2="-33.02" y2="132.08" width="0.1524" layer="91"/>
-<label x="-33.02" y="132.08" size="1.778" layer="95"/>
+<wire x1="-22.86" y1="132.08" x2="-35.56" y2="132.08" width="0.1524" layer="91"/>
+<label x="-35.56" y="132.08" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="U/!L_3V3" class="0">
@@ -2282,8 +2282,8 @@ reference, which I am not sure about)</text>
 </segment>
 <segment>
 <pinref part="U$2" gate="WING_BU" pin="P$4"/>
-<wire x1="-22.86" y1="134.62" x2="-33.02" y2="134.62" width="0.1524" layer="91"/>
-<label x="-33.02" y="134.62" size="1.778" layer="95"/>
+<wire x1="-22.86" y1="134.62" x2="-35.56" y2="134.62" width="0.1524" layer="91"/>
+<label x="-35.56" y="134.62" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D1_3V3" class="0">
@@ -2294,8 +2294,8 @@ reference, which I am not sure about)</text>
 </segment>
 <segment>
 <pinref part="U$2" gate="WING_BU" pin="P$3"/>
-<wire x1="-22.86" y1="137.16" x2="-33.02" y2="137.16" width="0.1524" layer="91"/>
-<label x="-33.02" y="137.16" size="1.778" layer="95"/>
+<wire x1="-22.86" y1="137.16" x2="-35.56" y2="137.16" width="0.1524" layer="91"/>
+<label x="-35.56" y="137.16" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D2_3V3" class="0">
@@ -2306,8 +2306,8 @@ reference, which I am not sure about)</text>
 </segment>
 <segment>
 <pinref part="U$2" gate="WING_BU" pin="P$2"/>
-<wire x1="-22.86" y1="139.7" x2="-33.02" y2="139.7" width="0.1524" layer="91"/>
-<label x="-33.02" y="139.7" size="1.778" layer="95"/>
+<wire x1="-22.86" y1="139.7" x2="-35.56" y2="139.7" width="0.1524" layer="91"/>
+<label x="-35.56" y="139.7" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D3_3V3" class="0">
@@ -2318,8 +2318,8 @@ reference, which I am not sure about)</text>
 </segment>
 <segment>
 <pinref part="U$2" gate="WING_BU" pin="P$1"/>
-<wire x1="-22.86" y1="142.24" x2="-33.02" y2="142.24" width="0.1524" layer="91"/>
-<label x="-33.02" y="142.24" size="1.778" layer="95"/>
+<wire x1="-22.86" y1="142.24" x2="-35.56" y2="142.24" width="0.1524" layer="91"/>
+<label x="-35.56" y="142.24" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D4_3V3" class="0">
@@ -2330,8 +2330,8 @@ reference, which I am not sure about)</text>
 </segment>
 <segment>
 <pinref part="U$2" gate="WING_BL" pin="P$8"/>
-<wire x1="-22.86" y1="170.18" x2="-33.02" y2="170.18" width="0.1524" layer="91"/>
-<label x="-33.02" y="170.18" size="1.778" layer="95"/>
+<wire x1="-22.86" y1="170.18" x2="-38.1" y2="170.18" width="0.1524" layer="91"/>
+<label x="-38.1" y="170.18" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D5_3V3" class="0">
@@ -2342,8 +2342,8 @@ reference, which I am not sure about)</text>
 </segment>
 <segment>
 <pinref part="U$2" gate="WING_BL" pin="P$7"/>
-<wire x1="-22.86" y1="172.72" x2="-33.02" y2="172.72" width="0.1524" layer="91"/>
-<label x="-33.02" y="172.72" size="1.778" layer="95"/>
+<wire x1="-22.86" y1="172.72" x2="-38.1" y2="172.72" width="0.1524" layer="91"/>
+<label x="-38.1" y="172.72" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D6_3V3" class="0">
@@ -2354,8 +2354,8 @@ reference, which I am not sure about)</text>
 </segment>
 <segment>
 <pinref part="U$2" gate="WING_BL" pin="P$6"/>
-<wire x1="-22.86" y1="175.26" x2="-33.02" y2="175.26" width="0.1524" layer="91"/>
-<label x="-33.02" y="175.26" size="1.778" layer="95"/>
+<wire x1="-22.86" y1="175.26" x2="-38.1" y2="175.26" width="0.1524" layer="91"/>
+<label x="-38.1" y="175.26" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="!BA-BS_3V3" class="0">
@@ -2366,8 +2366,8 @@ reference, which I am not sure about)</text>
 </segment>
 <segment>
 <pinref part="U$2" gate="WING_BL" pin="P$5"/>
-<wire x1="-22.86" y1="177.8" x2="-33.02" y2="177.8" width="0.1524" layer="91"/>
-<label x="-33.02" y="177.8" size="1.778" layer="95"/>
+<wire x1="-22.86" y1="177.8" x2="-38.1" y2="177.8" width="0.1524" layer="91"/>
+<label x="-38.1" y="177.8" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="!HALT_3V3" class="0">
@@ -2378,8 +2378,8 @@ reference, which I am not sure about)</text>
 </segment>
 <segment>
 <pinref part="U$2" gate="WING_BL" pin="P$4"/>
-<wire x1="-22.86" y1="180.34" x2="-33.02" y2="180.34" width="0.1524" layer="91"/>
-<label x="-33.02" y="180.34" size="1.778" layer="95"/>
+<wire x1="-22.86" y1="180.34" x2="-38.1" y2="180.34" width="0.1524" layer="91"/>
+<label x="-38.1" y="180.34" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D7_3V3" class="0">
@@ -2390,8 +2390,8 @@ reference, which I am not sure about)</text>
 </segment>
 <segment>
 <pinref part="U$2" gate="WING_BL" pin="P$3"/>
-<wire x1="-22.86" y1="182.88" x2="-33.02" y2="182.88" width="0.1524" layer="91"/>
-<label x="-33.02" y="182.88" size="1.778" layer="95"/>
+<wire x1="-22.86" y1="182.88" x2="-38.1" y2="182.88" width="0.1524" layer="91"/>
+<label x="-38.1" y="182.88" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="!HTCF_3V3" class="0">
@@ -2402,8 +2402,8 @@ reference, which I am not sure about)</text>
 </segment>
 <segment>
 <pinref part="U$2" gate="WING_BL" pin="P$2"/>
-<wire x1="-22.86" y1="185.42" x2="-33.02" y2="185.42" width="0.1524" layer="91"/>
-<label x="-33.02" y="185.42" size="1.778" layer="95"/>
+<wire x1="-22.86" y1="185.42" x2="-38.1" y2="185.42" width="0.1524" layer="91"/>
+<label x="-38.1" y="185.42" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="!TCF_3V3" class="0">
@@ -2414,20 +2414,20 @@ reference, which I am not sure about)</text>
 </segment>
 <segment>
 <pinref part="U$2" gate="WING_BL" pin="P$1"/>
-<wire x1="-22.86" y1="187.96" x2="-33.02" y2="187.96" width="0.1524" layer="91"/>
-<label x="-33.02" y="187.96" size="1.778" layer="95"/>
+<wire x1="-22.86" y1="187.96" x2="-38.1" y2="187.96" width="0.1524" layer="91"/>
+<label x="-38.1" y="187.96" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="E_3V3" class="0">
+<net name="!E_3V3" class="0">
 <segment>
 <pinref part="IC3" gate="G$1" pin="A1"/>
 <wire x1="-63.5" y1="50.8" x2="-76.2" y2="50.8" width="0.1524" layer="91"/>
 <label x="-76.2" y="50.8" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="WING_AU" pin="P$7"/>
-<wire x1="-91.44" y1="129.54" x2="-104.14" y2="129.54" width="0.1524" layer="91"/>
-<label x="-104.14" y="129.54" size="1.778" layer="95"/>
+<wire x1="-88.9" y1="132.08" x2="-104.14" y2="132.08" width="0.1524" layer="91"/>
+<label x="-104.14" y="132.08" size="1.778" layer="95"/>
+<pinref part="U$2" gate="WING_AU" pin="P$6"/>
 </segment>
 </net>
 </nets>

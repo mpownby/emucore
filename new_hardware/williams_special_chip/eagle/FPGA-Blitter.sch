@@ -1531,6 +1531,10 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <text x="221.488" y="-38.608" size="3.81" layer="94">Papillio One to DIP 40 Special Chip</text>
 <text x="96.52" y="55.88" size="1.778" layer="98">Goal: Make VCC be about 4.3V</text>
 <text x="-35.56" y="68.58" size="1.778" layer="98">Goal: Make VCC be about 4.3V</text>
+<text x="12.7" y="81.28" size="1.778" layer="98">Each IDTQS IC can output 120 mA,
+so make sure diode can handle that
+(if it is used for something beyond a voltage
+reference, which I am not sure about)</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="-109.22" y="-66.04"/>
@@ -2431,4 +2435,10 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 </sheets>
 </schematic>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>

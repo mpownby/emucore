@@ -61,15 +61,14 @@ signal inhu : std_logic;
  
 --registers
 signal color : std_logic_vector(7 downto 0);
-signal srchi : std_logic_vector(7 downto 0);
-signal srclo : std_logic_vector(7 downto 0);
-signal dsthi : std_logic_vector(7 downto 0);
-signal dstlo : std_logic_vector(7 downto 0);
+signal src : std_logic_vector(15 downto 0);
+signal dst : std_logic_vector(15 downto 0);
 signal width : std_logic_vector(7 downto 0);
 signal height : std_logic_vector(7 downto 0);
  
 signal reqhalt : std_logic := '0';
 signal doblit : std_logic := '0';
+signal csqueued : std_logic := '0';
 
 begin
 
@@ -80,13 +79,26 @@ HTCF_N <= '1';
 --R_WN <= '1';
 WINH_N <= '1';
 
-process(CLK_4MHZ,RESET_N)
+watch_cs : process(E_N,RESET_N)
+	begin
+		if (RESET_N='0') then
+			-- todo
+		else
+			if (falling_edge(E_N)) then
+				if (CS_N='0') then
+					csqueued <= '1';
+				end if;
+			end if;
+		end if;
+	end process;
+
+loadreg: process(CLK_4MHZ,RESET_N)
 	begin
 		if(RESET_N='0') then
 			doblit<='0';
 		else
 			if(rising_edge(CLK_4MHZ)) then
-				if (CS_N='0') AND (E_N='0') then
+				if (csqueued = '1') then
 					case AL(2 downto 0) IS
 						when "000" =>
 							--set mode bits
@@ -107,16 +119,16 @@ process(CLK_4MHZ,RESET_N)
 							color <= D;
 						when "010" =>
 							--set src high
-							srchi <= D;
+							src(15 downto 8) <= D;
 						when "011" =>
 							--set src low
-							srclo <= D;
+							src(7 downto 0) <= D;
 						when "100" =>
 							--set dest high
-							dsthi <= D;
+							dst(15 downto 8) <= D;
 						when "101" =>
 							--set dest low
-							dstlo <= D;
+							dst(7 downto 0) <= D;
 						when "110" =>
 							--set width
 							width <= D xor "00000100";
@@ -125,7 +137,11 @@ process(CLK_4MHZ,RESET_N)
 							height <= D xor "00000100";
 						when others =>
 						end case;
-				end if; -- CS_N and E_N are both low
+
+						-- wait for CS to be lowered again
+						csqueued <= '0';
+						
+				end if; -- CS was lowered
 			end if; -- rising edge of CLK_4MHZ
 		end if;	-- else if RESET_N is not low
 	end process;

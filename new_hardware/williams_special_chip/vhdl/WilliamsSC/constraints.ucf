@@ -37,7 +37,7 @@ CONFIG PROHIBIT=P47;
 #NET A(2)     LOC="P26"  | IOSTANDARD=LVTTL;                             # A2
 #NET A(3)     LOC="P33"  | IOSTANDARD=LVTTL;                             # A3
 #NET A(4)     LOC="P35"  | IOSTANDARD=LVTTL;                             # A4
-#NET A(5)     LOC="P40"  | IOSTANDARD=LVTTL;                             # A5
+#NET A(5)     LOC="P40"  | IOSTANDARD=LVTTL;                             # A5 (CAN BE USED AS CLOCK!)
 #NET A(6)     LOC="P53"  | IOSTANDARD=LVTTL;                             # A6
 #NET A(7)     LOC="P57"  | IOSTANDARD=LVTTL;                             # A7
 #NET A(8)     LOC="P60"  | IOSTANDARD=LVTTL;                             # A8
@@ -45,11 +45,18 @@ CONFIG PROHIBIT=P47;
 #NET A(10)    LOC="P65"  | IOSTANDARD=LVTTL;                             # A10
 #NET A(11)    LOC="P67"  | IOSTANDARD=LVTTL;                             # A11
 #NET A(12)    LOC="P70"  | IOSTANDARD=LVTTL;                             # A12
-NET E_N    LOC="P79"  | IOSTANDARD=LVTTL;                             # A13
-NET WINH_N		LOC="P84"  | IOSTANDARD=LVTTL;                             # A14
-NET AH(15)	LOC="P86"  | IOSTANDARD=LVTTL;                             # A15
-NET TCF_N 	LOC="P85"  | IOSTANDARD=LVTTL;                             # B0
-NET HTCF_N	LOC="P83"  | IOSTANDARD=LVTTL;                             # B1
+
+#NET E_N    LOC="P79"  | IOSTANDARD=LVTTL;                             # A13
+#NET WINH_N		LOC="P84"  | IOSTANDARD=LVTTL;                             # A14 (CAN BE USED AS A CLOCK!)
+
+NET WINH_N    LOC="P79"  | IOSTANDARD=LVTTL;                             # A13
+NET E_N		LOC="P84"  | IOSTANDARD=LVTTL;                             # A14 (CAN BE USED AS A CLOCK!)
+
+#NET AH(15)	LOC="P86"  | IOSTANDARD=LVTTL;                             # A15 (CAN BE USED AS CLOCK!)
+NET CLK_4MHZ	LOC="P86"  | IOSTANDARD=LVTTL;                             # A15 (CAN BE USED AS CLOCK!)
+
+NET TCF_N 	LOC="P85"  | IOSTANDARD=LVTTL;                             # B0 (CAN BE USED AS CLOCK!)
+NET HTCF_N	LOC="P83"  | IOSTANDARD=LVTTL;                             # B1 (CAN BE USED AS CLOCK!)
 NET D(7)		LOC="P78"  | IOSTANDARD=LVTTL;                             # B2
 NET HALT_N 	LOC="P71"  | IOSTANDARD=LVTTL;                             # B3
 NET BA_BS_N	LOC="P68"  | IOSTANDARD=LVTTL;                             # B4
@@ -58,7 +65,7 @@ NET D(5)   	LOC="P63"  | IOSTANDARD=LVTTL;                             # B6
 NET D(4)   	LOC="P61"  | IOSTANDARD=LVTTL;                             # B7
 NET D(3)   	LOC="P58"  | IOSTANDARD=LVTTL;                             # B8
 NET D(2)   	LOC="P54"  | IOSTANDARD=LVTTL;                             # B9
-NET D(1)		LOC="P41"  | IOSTANDARD=LVTTL;                             # B10
+NET D(1)		LOC="P41"  | IOSTANDARD=LVTTL;                             # B10 (CAN BE USED AS CLOCK!)
 NET U_LN		LOC="P36"  | IOSTANDARD=LVTTL;                             # B11
 NET D(0)		LOC="P34"  | IOSTANDARD=LVTTL;                             # B12
 NET R_WN		LOC="P32"  | IOSTANDARD=LVTTL;                             # B13
@@ -67,7 +74,9 @@ NET AL(4)		LOC="P22"  | IOSTANDARD=LVTTL;                             # B15
 NET AH(14)     LOC="P91"  | IOSTANDARD=LVTTL;                             # C0
 NET AH(13)     LOC="P92"  | IOSTANDARD=LVTTL;                             # C1
 NET RESET_N     LOC="P94"  | IOSTANDARD=LVTTL;                             # C2
-NET CLK_4MHZ     LOC="P95"  | IOSTANDARD=LVTTL;                             # C3
+#NET CLK_4MHZ     LOC="P95"  | IOSTANDARD=LVTTL;                             # C3
+NET AH(15)		LOC="P95" | IOSTANDARD=LVTTL;
+
 NET AH(12)     LOC="P98"  | IOSTANDARD=LVTTL;                             # C4
 NET AH(11)     LOC="P2"   | IOSTANDARD=LVTTL;                             # C5
 NET AH(10)     LOC="P3"   | IOSTANDARD=LVTTL;                             # C6

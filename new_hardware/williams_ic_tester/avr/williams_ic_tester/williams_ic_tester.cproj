@@ -77,6 +77,7 @@
         </avrgcc.linker.libraries.Libraries>
       </AvrGcc>
     </ToolchainSettings>
+    <PostBuildEvent>avr-objcopy -I ihex $(OutputDirectory)\$(OutputFileName).hex -O binary $(OutputDirectory)\$(OutputFileName).bin</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <ToolchainSettings>
@@ -106,6 +107,7 @@
         <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
       </AvrGcc>
     </ToolchainSettings>
+    <PostBuildEvent>avr-objcopy -I ihex $(OutputDirectory)\$(OutputFileName).hex -O binary $(OutputDirectory)\$(OutputFileName).bin</PostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="common.h">

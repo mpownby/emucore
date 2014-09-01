@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "williams_ic_tester", "williams_ic_tester.cproj", "{488314EB-62F0-4DE7-98AC-4FFB409990F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{488314EB-62F0-4DE7-98AC-4FFB409990F4}.Debug|AVR.ActiveCfg = Debug|AVR
+		{488314EB-62F0-4DE7-98AC-4FFB409990F4}.Debug|AVR.Build.0 = Debug|AVR
+		{488314EB-62F0-4DE7-98AC-4FFB409990F4}.Release|AVR.ActiveCfg = Release|AVR
+		{488314EB-62F0-4DE7-98AC-4FFB409990F4}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

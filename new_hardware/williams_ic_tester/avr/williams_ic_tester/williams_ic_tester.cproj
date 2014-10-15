@@ -125,6 +125,12 @@
     <Compile Include="protocol.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="SC.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SC.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="serial.c">
       <SubType>compile</SubType>
     </Compile>

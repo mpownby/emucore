@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.6.0">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.05" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -4605,14 +4605,12 @@ Digikey A32077-ND</description>
 <part name="P+10" library="SparkFun" deviceset="VCC" device=""/>
 <part name="U10" library="74xx-us" deviceset="74*74" device="D" technology="LS"/>
 <part name="DB1" library="mpo" deviceset="A32077-ND" device="" value="DB25 (FEMALE)"/>
-<part name="C100" library="SparkFun" deviceset="CAP" device="1206" value="Unknown value"/>
 <part name="P+11" library="SparkFun" deviceset="VCC" device=""/>
 <part name="U3" library="memory" deviceset="27256" device=""/>
 <part name="R10" library="SparkFun" deviceset="RESISTOR" device="1206" value="4.7k"/>
 <part name="P+12" library="SparkFun" deviceset="VCC" device=""/>
 <part name="GND5" library="SparkFun" deviceset="GND" device=""/>
 <part name="P+13" library="SparkFun" deviceset="VCC" device=""/>
-<part name="C9" library="SparkFun" deviceset="CAP" device="1206" value="0.001uF"/>
 <part name="C14" library="SparkFun" deviceset="CAP" device="1206" value="0.001uF"/>
 <part name="C15" library="SparkFun" deviceset="CAP_POL" device="PTH2" value="100uF/25V"/>
 <part name="P+14" library="SparkFun" deviceset="VCC" device=""/>
@@ -4666,6 +4664,7 @@ Digikey A32077-ND</description>
 <part name="JP7" library="pinhead" deviceset="PINHD-1X7" device=""/>
 <part name="JP8" library="pinhead" deviceset="PINHD-1X7" device=""/>
 <part name="L1" library="SparkFun" deviceset="INDUCTOR" device="H*" technology="1206" value="2.2uH"/>
+<part name="R100" library="SparkFun" deviceset="RESISTOR" device="1206" value="680"/>
 </parts>
 <sheets>
 <sheet>
@@ -4692,7 +4691,9 @@ I did not bother with these
 since they were never used.
 They most likely mirror
 very closely the Star
-Rider PIF schematic.</text>
+Rider PIF schematic.
+A capacitor, C9, is installed, which appears to
+have been intended to go with U8.</text>
 <text x="233.68" y="-160.02" size="1.778" layer="91">NOTE: DAV' is unconnected.
 This is opposite of Firefox,
 which uses DAV' but ignores DAV.</text>
@@ -4702,8 +4703,9 @@ just enough to document.
 The pins on the board
 mirror the Star Rider PIF board,
 which is not reflected here.</text>
-<text x="7.62" y="25.4" size="1.778" layer="91">I partly guessed on the values for C9 and C14,
-and L1 by using Star Rider as reference.</text>
+<text x="12.7" y="25.4" size="1.778" layer="91">I guessed at the values for C14
+and L1 by using Star Rider as reference.
+Probably doesn't matter that much.</text>
 <wire x1="31.75" y1="40.64" x2="19.05" y2="40.64" width="0.1524" layer="98" style="longdash"/>
 <wire x1="19.05" y1="40.64" x2="19.05" y2="93.98" width="0.1524" layer="98" style="longdash"/>
 <wire x1="19.05" y1="93.98" x2="31.75" y2="93.98" width="0.1524" layer="98" style="longdash"/>
@@ -4723,8 +4725,13 @@ exactly, going
 to an uninstalled 244.
 Pins 16-17 are N/C
 from what I can tell.</text>
-<text x="281.94" y="104.14" size="1.778" layer="91">A resistor or cap connecting 'E' to VCC.
-Still working on discovering this value.</text>
+<text x="279.4" y="101.6" size="1.778" layer="91">This appears to be a strong pull-up resistor.
+Color code suggests that value is 680,
+while measuring with a multimeter yields a value of 710 (without desoldering it)
+so this is probably pretty close.</text>
+<text x="-28.956" y="34.544" size="1.778" layer="91">J1 and J2 are
+molex style, the
+same as on Star Rider.</text>
 </plain>
 <instances>
 <instance part="J2" gate="-1" x="-5.08" y="48.26" rot="R180"/>
@@ -4793,18 +4800,16 @@ Still working on discovering this value.</text>
 <instance part="U10" gate="A" x="121.92" y="-40.64"/>
 <instance part="U10" gate="B" x="165.1" y="-40.64"/>
 <instance part="DB1" gate="G$1" x="248.92" y="-129.54"/>
-<instance part="C100" gate="G$1" x="274.32" y="101.6"/>
-<instance part="P+11" gate="1" x="274.32" y="109.22"/>
+<instance part="P+11" gate="1" x="274.32" y="111.76"/>
 <instance part="U3" gate="A" x="198.12" y="68.58"/>
 <instance part="R10" gate="G$1" x="111.76" y="55.88" rot="R270"/>
 <instance part="P+12" gate="1" x="111.76" y="63.5"/>
 <instance part="GND5" gate="1" x="73.66" y="-33.02"/>
 <instance part="P+13" gate="1" x="73.66" y="-15.24"/>
-<instance part="C9" gate="G$1" x="15.24" y="17.78"/>
-<instance part="C14" gate="G$1" x="38.1" y="17.78"/>
-<instance part="C15" gate="G$1" x="63.5" y="17.78" rot="R180"/>
-<instance part="P+14" gate="1" x="73.66" y="15.24" rot="R270"/>
-<instance part="GND1" gate="1" x="76.2" y="22.86" rot="R90"/>
+<instance part="C14" gate="G$1" x="15.24" y="17.78"/>
+<instance part="C15" gate="G$1" x="50.8" y="17.78" rot="R180"/>
+<instance part="P+14" gate="1" x="60.96" y="15.24" rot="R270"/>
+<instance part="GND1" gate="1" x="63.5" y="22.86" rot="R90"/>
 <instance part="R11" gate="G$1" x="144.78" y="-25.4" rot="R270"/>
 <instance part="P+15" gate="1" x="144.78" y="-17.78"/>
 <instance part="R12" gate="G$1" x="350.52" y="-73.66" rot="R270"/>
@@ -4844,7 +4849,8 @@ Still working on discovering this value.</text>
 <instance part="GND15" gate="1" x="365.76" y="35.56"/>
 <instance part="P+27" gate="1" x="365.76" y="50.8"/>
 <instance part="C5" gate="G$1" x="365.76" y="43.18" rot="MR0"/>
-<instance part="L1" gate="G$1" x="27.94" y="7.62" rot="R90"/>
+<instance part="L1" gate="G$1" x="30.48" y="7.62" rot="R90"/>
+<instance part="R100" gate="G$1" x="274.32" y="104.14" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -4917,20 +4923,17 @@ Still working on discovering this value.</text>
 <pinref part="U$1" gate="G$1" pin="GND"/>
 </segment>
 <segment>
-<wire x1="10.16" y1="22.86" x2="15.24" y2="22.86" width="0.1524" layer="91"/>
-<pinref part="C9" gate="G$1" pin="1"/>
 <pinref part="J1" gate="-2" pin="S"/>
 <wire x1="7.62" y1="17.78" x2="10.16" y2="17.78" width="0.1524" layer="91"/>
 <wire x1="10.16" y1="17.78" x2="10.16" y2="22.86" width="0.1524" layer="91"/>
 <pinref part="C14" gate="G$1" pin="1"/>
-<wire x1="15.24" y1="22.86" x2="38.1" y2="22.86" width="0.1524" layer="91"/>
-<junction x="15.24" y="22.86"/>
+<wire x1="10.16" y1="22.86" x2="15.24" y2="22.86" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="38.1" y1="22.86" x2="63.5" y2="22.86" width="0.1524" layer="91"/>
-<junction x="38.1" y="22.86"/>
+<wire x1="15.24" y1="22.86" x2="50.8" y2="22.86" width="0.1524" layer="91"/>
+<junction x="15.24" y="22.86"/>
 <pinref part="C15" gate="G$1" pin="-"/>
-<wire x1="63.5" y1="22.86" x2="73.66" y2="22.86" width="0.1524" layer="91"/>
-<junction x="63.5" y="22.86"/>
+<wire x1="50.8" y1="22.86" x2="60.96" y2="22.86" width="0.1524" layer="91"/>
+<junction x="50.8" y="22.86"/>
 </segment>
 <segment>
 <wire x1="83.82" y1="99.06" x2="83.82" y2="101.6" width="0.1524" layer="91"/>
@@ -5073,8 +5076,8 @@ Still working on discovering this value.</text>
 </segment>
 <segment>
 <pinref part="P+11" gate="1" pin="VCC"/>
-<pinref part="C100" gate="G$1" pin="1"/>
-<wire x1="274.32" y1="109.22" x2="274.32" y2="106.68" width="0.1524" layer="91"/>
+<pinref part="R100" gate="G$1" pin="1"/>
+<wire x1="274.32" y1="111.76" x2="274.32" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U4" gate="G$1" pin="7"/>
@@ -5107,16 +5110,13 @@ Still working on discovering this value.</text>
 <junction x="73.66" y="-17.78"/>
 </segment>
 <segment>
-<pinref part="C14" gate="G$1" pin="2"/>
 <pinref part="P+14" gate="1" pin="VCC"/>
-<wire x1="38.1" y1="15.24" x2="63.5" y2="15.24" width="0.1524" layer="91"/>
 <pinref part="C15" gate="G$1" pin="+"/>
-<wire x1="63.5" y1="15.24" x2="73.66" y2="15.24" width="0.1524" layer="91"/>
-<junction x="63.5" y="15.24"/>
-<wire x1="35.56" y1="7.62" x2="38.1" y2="7.62" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="7.62" x2="38.1" y2="15.24" width="0.1524" layer="91"/>
-<junction x="38.1" y="15.24"/>
+<wire x1="50.8" y1="15.24" x2="60.96" y2="15.24" width="0.1524" layer="91"/>
 <pinref part="L1" gate="G$1" pin="2"/>
+<wire x1="38.1" y1="7.62" x2="50.8" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="7.62" x2="50.8" y2="15.24" width="0.1524" layer="91"/>
+<junction x="50.8" y="15.24"/>
 </segment>
 <segment>
 <pinref part="R11" gate="G$1" pin="1"/>
@@ -5594,10 +5594,10 @@ Still working on discovering this value.</text>
 <pinref part="U4" gate="G$1" pin="34"/>
 <wire x1="259.08" y1="76.2" x2="274.32" y2="76.2" width="0.1524" layer="91"/>
 <label x="261.62" y="76.2" size="1.778" layer="95"/>
-<pinref part="C100" gate="G$1" pin="2"/>
 <wire x1="274.32" y1="76.2" x2="274.32" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="276.86" y1="76.2" x2="274.32" y2="76.2" width="0.1524" layer="91"/>
 <junction x="274.32" y="76.2"/>
+<pinref part="R100" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="25"/>
@@ -6376,23 +6376,12 @@ Still working on discovering this value.</text>
 <junction x="111.76" y="48.26"/>
 </segment>
 </net>
-<net name="N$8" class="0">
-<segment>
-<pinref part="C9" gate="G$1" pin="2"/>
-<pinref part="J1" gate="-1" pin="S"/>
-<wire x1="7.62" y1="15.24" x2="15.24" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="7.62" x2="15.24" y2="7.62" width="0.1524" layer="91"/>
-<wire x1="15.24" y1="7.62" x2="15.24" y2="15.24" width="0.1524" layer="91"/>
-<junction x="15.24" y="15.24"/>
-<pinref part="L1" gate="G$1" pin="1"/>
-</segment>
-</net>
 <net name="N$3" class="0">
 <segment>
 <wire x1="-2.54" y1="5.08" x2="-2.54" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="-2.54" y1="33.02" x2="81.28" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="33.02" x2="81.28" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="5.08" x2="-2.54" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="33.02" x2="68.58" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="33.02" x2="68.58" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="5.08" x2="-2.54" y2="5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -6455,6 +6444,17 @@ Still working on discovering this value.</text>
 <wire x1="287.02" y1="-30.48" x2="223.52" y2="-30.48" width="0.1524" layer="91"/>
 <wire x1="223.52" y1="-30.48" x2="223.52" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="223.52" y1="10.16" x2="287.02" y2="10.16" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="C14" gate="G$1" pin="2"/>
+<pinref part="J1" gate="-1" pin="S"/>
+<wire x1="7.62" y1="15.24" x2="15.24" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="7.62" x2="15.24" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="7.62" x2="15.24" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="L1" gate="G$1" pin="1"/>
+<junction x="15.24" y="15.24"/>
 </segment>
 </net>
 </nets>

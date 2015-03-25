@@ -3431,8 +3431,6 @@ Digikey: A32077-ND
 <wire x1="3.5" y1="-2.5" x2="3.5" y2="2.5" width="0.4064" layer="21"/>
 <wire x1="3.5" y1="2.5" x2="-3.5" y2="2.5" width="0.4064" layer="21"/>
 <text x="-5" y="-2.775" size="1.778" layer="21">1</text>
-<wire x1="2" y1="-2" x2="2" y2="0" width="0.4064" layer="1"/>
-<wire x1="2" y1="0" x2="-4" y2="0" width="0.4064" layer="1"/>
 </package>
 </packages>
 <symbols>
@@ -4649,12 +4647,12 @@ Digikey A32077-ND</description>
 <part name="JP2" library="pinhead" deviceset="PINHD-1X8" device=""/>
 <part name="JP1" library="pinhead" deviceset="PINHD-1X20" device=""/>
 <part name="JP4" library="pinhead" deviceset="PINHD-1X20" device=""/>
-<part name="JP5" library="pinhead" deviceset="PINHD-1X8" device=""/>
 <part name="JP6" library="pinhead" deviceset="PINHD-1X8" device=""/>
 <part name="JP7" library="pinhead" deviceset="PINHD-1X7" device=""/>
 <part name="JP8" library="pinhead" deviceset="PINHD-1X7" device=""/>
 <part name="L1" library="SparkFun" deviceset="INDUCTOR" device="H*" technology="1206" value="2.2uH"/>
 <part name="R100" library="SparkFun" deviceset="RESISTOR" device="1206" value="680"/>
+<part name="JP5" library="pinhead" deviceset="PINHD-1X2" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6333,10 +6331,10 @@ same as on Star Rider.</text>
 <instance part="JP2" gate="A" x="20.32" y="109.22"/>
 <instance part="JP1" gate="A" x="73.66" y="96.52"/>
 <instance part="JP4" gate="A" x="101.6" y="96.52"/>
-<instance part="JP5" gate="A" x="154.94" y="109.22"/>
 <instance part="JP6" gate="A" x="154.94" y="78.74"/>
 <instance part="JP7" gate="A" x="236.22" y="111.76"/>
 <instance part="JP8" gate="A" x="236.22" y="83.82"/>
+<instance part="JP5" gate="G$1" x="154.94" y="101.6"/>
 </instances>
 <busses>
 </busses>
@@ -6418,9 +6416,9 @@ same as on Star Rider.</text>
 <label x="55.88" y="119.38" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP5" gate="A" pin="8"/>
 <wire x1="152.4" y1="101.6" x2="137.16" y2="101.6" width="0.1524" layer="91"/>
 <label x="137.16" y="101.6" size="1.778" layer="95"/>
+<pinref part="JP5" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="JP7" gate="A" pin="7"/>
@@ -6676,9 +6674,9 @@ same as on Star Rider.</text>
 </net>
 <net name="!ENABLE_ROM_E_TO_F" class="0">
 <segment>
-<pinref part="JP5" gate="A" pin="7"/>
 <wire x1="152.4" y1="104.14" x2="119.38" y2="104.14" width="0.1524" layer="91"/>
 <label x="119.38" y="104.14" size="1.778" layer="95"/>
+<pinref part="JP5" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="!ENABLE_ROM_C_TO_D" class="0">

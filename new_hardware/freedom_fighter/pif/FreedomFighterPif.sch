@@ -4689,8 +4689,10 @@ just enough to document.
 The pins on the board
 mirror the Star Rider PIF board,
 which is not reflected here.</text>
-<text x="12.7" y="25.4" size="1.778" layer="91">I guessed at the values for C14
-and L1 by using Star Rider as reference.
+<text x="12.7" y="25.4" size="1.778" layer="91">C14 and C15 are confirmed.
+C14 measured 1078pF (0.001078uF).
+I guessed at the value for
+L1 by using Star Rider as reference.
 Probably doesn't matter that much.</text>
 <wire x1="31.75" y1="40.64" x2="19.05" y2="40.64" width="0.1524" layer="98" style="longdash"/>
 <wire x1="19.05" y1="40.64" x2="19.05" y2="93.98" width="0.1524" layer="98" style="longdash"/>
@@ -4711,10 +4713,10 @@ exactly, going
 to an uninstalled 244.
 Pins 16-17 are N/C
 from what I can tell.</text>
-<text x="279.4" y="101.6" size="1.778" layer="91">This appears to be a strong pull-up resistor.
+<text x="279.4" y="101.6" size="1.778" layer="91">This is a strong pull-up resistor.
 Color code suggests that value is 680,
-while measuring with a multimeter yields a value of 710 (without desoldering it)
-so this is probably pretty close.</text>
+while measuring it (desoldered) 
+yields a value of 710-714.</text>
 <text x="-28.956" y="34.544" size="1.778" layer="91">J1 and J2 are
 molex style, the
 same as on Star Rider.</text>
